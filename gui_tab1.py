@@ -36,6 +36,7 @@ def initialize_vars(self):
     self.selected_year = 2019
     self.sub_directory = "taxcalc"
     self.year_list = [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027]
+    #self.year_list = [2023, 2024, 2025, 2026, 2027]
     # Include a check whether the years are valid by looking at the 
     # selected growfactors file
         
@@ -47,7 +48,7 @@ def initialize_vars(self):
     self.vars['pit_data_filename'] = "pit_data_training.csv"
     self.vars['pit_weights_filename'] = "pit_weights_training.csv"
     self.vars['pit_records_variables_filename'] = "records_variables_pit_training.json"
-    self.vars['pit_benchmark_filename'] = "tax_incentives_benchmark_pit_training.json"
+    self.vars['pit_benchmark_filename'] = "taxcalc/tax_incentives_benchmark_pit_training.json"
     self.vars['pit_elasticity_filename'] = "elasticity_pit_training.json"
     self.vars['pit_functions_filename'] = "functions_pit_training.py"
     self.vars['pit_function_names_filename'] = "function_names_pit_training.json"
@@ -57,7 +58,7 @@ def initialize_vars(self):
     
     self.vars['DEFAULTS_FILENAME'] = "current_law_policy_pit_peru.json"
     self.vars['GROWFACTORS_FILENAME'] = "growfactors_pit_peru.csv"
-    self.vars['pit_data_filename'] = "sample_data14.csv"
+    self.vars['pit_data_filename'] = "sample_data_peru.csv"
     self.vars['pit_weights_filename'] = "sample_weights.csv"
     self.vars['pit_records_variables_filename'] = "records_variables_pit_peru.json"
     self.vars['pit_benchmark_filename'] = "taxcalc/tax_incentives_benchmark_pit_peru.json"
@@ -375,14 +376,15 @@ def tab1(self):
         if self.status[tax_type] == tk.NORMAL:
             self.vars[tax_type] = 1
     """
-    #initializing the display widgets  
+    #initializing the display widgets 
+    font="Courier New"
     self.initialize_vars()
-    self.fontStyle = tkfont.Font(family="Calibri", size="12")
-    self.fontStyle_sub_title = tkfont.Font(family="Calibri", size="14", weight="bold")         
-    self.fontStyle_title = tkfont.Font(family="Calibri", size="18", weight="bold")
+    self.fontStyle = tkfont.Font(family=font, size="12")
+    self.fontStyle_sub_title = tkfont.Font(family=font, size="12", weight="bold")         
+    self.fontStyle_title = tkfont.Font(family=font, size="20", weight="bold")
     self.s = ttk.Style()
     self.s.configure('my.TButton', font=self.fontStyle)        
-    self.text_font = ('Calibri', '12')
+    self.text_font = (font, '11')
     
     self.block_settings_pos_x = {}
     self.status = {}

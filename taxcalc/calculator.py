@@ -977,6 +977,7 @@ class Calculator(object):
             if self.records is not None:
                 im1 = calc1.array(imeasure)
                 im2 = calc2.array(imeasure)
+                print('income measure calc1, calc2', im1, im2)
             if self.corprecords is not None:
                 im1 = calc1.carray(imeasure)
                 im2 = calc2.carray(imeasure)
@@ -1017,7 +1018,8 @@ class Calculator(object):
         dt1 = {}
         for attribute_value in attribute_types:                   
             var_dataframe = self.distribution_table_dataframe(tax_type, distribution_vardict['DIST_VARIABLES'], attribute_value, attribute_var)
-            #print('var_dataframe \n', var_dataframe)
+            print('var_dataframe \n', var_dataframe)
+            print('imeasure', income_measure)
             if income_measure is None:
                 imeasure = 'GTI'
             else:
@@ -1034,6 +1036,7 @@ class Calculator(object):
             dt2 = {}
             for attribute_value in attribute_types:  
                 var_dataframe = calc.distribution_table_dataframe(tax_type, distribution_vardict['DIST_VARIABLES'], attribute_value, attribute_var)
+                print('have same income measure', have_same_income_measure(self, calc, imeasure))
                 if have_same_income_measure(self, calc, imeasure):
                     if income_measure is None:
                         imeasure = 'GTI'

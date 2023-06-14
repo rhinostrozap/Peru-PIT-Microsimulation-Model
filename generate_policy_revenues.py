@@ -274,7 +274,8 @@ def generate_policy_revenues():
         if global_variables[tax_type+'_display_revenue_table']:
             window_dict[tax_type] = tk.Toplevel()
             #window_dict[tax_type].geometry("800x600+600+140")
-            window_dict[tax_type].geometry("600x600+"+str(shift_x)+"+"+str(shift_y))       
+            window_dict[tax_type].geometry("600x600+"+str(shift_x)+"+"+str(shift_y)) 
+            window_dict[tax_type].font = ("Courier New", 12)
             shift_x = shift_x + shift
             shift_y = shift_y            
             #display_table(window, header=True)

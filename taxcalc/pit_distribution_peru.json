@@ -1,12 +1,12 @@
 {
   "DIST_VARIABLES": [
     "weight",
-    "GTI",
+    "total_gross_income",
     "pitax"
   ],
   "DIST_TABLE_COLUMNS": [
     "weight",
-    "GTI",
+    "total_gross_income",
     "pitax"
   ],
   "DIST_TABLE_LABELS": [
@@ -50,15 +50,15 @@
     -9e+99,
     -1e-09,
     1e-09,
-    50000.0,
-    100000.0,
-    150000.0,
-    200000.0,
-    300000.0,
-    400000.0,
     500000.0,
     1000000.0,
+    1500000.0,
+    2000000.0,
+    3000000.0,
+    4000000.0,
+    5000000.0,
+    10000000.0,
     9e+99
   ],
-  "income_measure": "GTI"
+  "income_measure": "total_gross_income"
 }
