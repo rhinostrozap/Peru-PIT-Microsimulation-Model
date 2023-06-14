@@ -268,8 +268,7 @@ def deduction_donations(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_charita
 
 "Calculation of net income from labor and foreign sources"
 @iterate_jit(nopython=True)
-def income_labor_all(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, 
-                         net_inc_labor_foreign):
+def income_labor_all(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
     tti_w = (net_inc_cat4 + net_inc_cat5) - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
     return tti_w
 
@@ -471,11 +470,11 @@ def cal_net_pit(pitax, foreign_tax_credit, pitax_net):
 @iterate_jit(nopython=True)
 def gross_total_income(income_lease, income_prop_freeuse, income_stocks_dom, income_stocks_foreign, 
                        income_prop_sale, income_cap_other, income_div, income_ind_work, income_board_dir, 
-                       income_sal, net_inc_foreign, GTI):
+                       income_sal, net_inc_foreign, total_gross_income):
     """
     Compute sum of net income from all categories of income.
     """
-    GTI = income_lease + income_prop_freeuse + income_stocks_dom + income_stocks_foreign + \
-                         income_prop_sale + income_cap_other + income_div + income_ind_work + income_board_dir + \
-                         income_sal + net_inc_foreign
-    return GTI
+    total_gross_income = income_lease + income_prop_freeuse + income_stocks_dom + income_stocks_foreign + \
+                        income_prop_sale + income_cap_other + income_div + income_ind_work + \
+                        income_board_dir + income_sal + net_inc_foreign
+    return (total_gross_income)

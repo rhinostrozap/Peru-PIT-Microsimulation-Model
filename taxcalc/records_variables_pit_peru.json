@@ -92,15 +92,7 @@
 			"cross_year": "No",
 			"attribute": "No"
 		},
-		"ded_ind_work": {
-			"type": "float",
-			"desc": "20% Deduction",
-			"form": {
-				"2019": "pit_peru"
-			},
-			"cross_year": "No",
-			"attribute": "No"
-		},
+		
 		"inc_board_dir": {
 			"type": "float",
 			"desc": "Board of directors per diem income",
@@ -359,14 +351,6 @@
 				"2019": "pit_peru"
 			}
 		},
-		"net_inc_labor_foreign": {
-			"type": "float",
-			"desc": "Net taxable income from work and foreign source",
-			"form": {
-				"2019": "pit_peru"
-			}
-		},
-		
 		"ded_std": {
 			"type": "float",
 			"desc": "Standard Deduction (7UIT in 2019) from work income",
@@ -444,7 +428,7 @@
 				"2019": "pit_peru"
 			}
 		},
-		"GTI": {
+		"total_gross_income": {
 			"type": "float",
 			"desc": "Total gross income from all sources before deduction",
 			"form": {
