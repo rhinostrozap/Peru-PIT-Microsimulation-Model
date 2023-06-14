@@ -3,52 +3,52 @@
     "selected_item": "elasticity_pit_taxable_income_value",
     "selected_value": [
       [
-        0.0,
-        0.0,
-        0.0
+        "0.0",
+        "0.5",
+        "0.5"
       ]
     ],
     "selected_year": [
-      "2022"
+      "2019"
     ]
   },
   "2": {
     "selected_item": "elasticity_pit_taxable_income_threshold",
     "selected_value": [
       [
-        100000,
-        1000000,
+        50000,
+        200000,
         9e+99
       ]
     ],
     "selected_year": [
-      "2022"
+      "2019"
     ]
   },
   "3": {
     "selected_item": "elasticity_pit_capital_income_value",
     "selected_value": [
       [
-        "0.6",
-        "0.6",
-        "0.6"
+        0.0,
+        0.0,
+        0.0
       ]
     ],
     "selected_year": [
-      "2022"
+      "2019"
     ]
   },
   "4": {
     "selected_item": "elasticity_pit_capital_income_threshold",
     "selected_value": [
       [
-        100000,
-        1000000,
+        50000,
+        200000,
         9e+99
       ]
     ],
     "selected_year": [
-      "2022"
+      "2019"
     ]
   }
 }

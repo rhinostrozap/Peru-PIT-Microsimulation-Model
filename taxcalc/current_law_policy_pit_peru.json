@@ -1,0 +1,1293 @@
+{
+	"_rate1": {
+		"long_name": "PIT tax rate 1",
+		"description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.08
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_tbrk1": {
+		"long_name": "First bracket",
+		"description": "Taxable income below this threshold is taxed at tax rate1",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			5
+		],
+		"range": {
+			"min": 0,
+			"max": "_tbrk2"
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "for _tbrk2",
+		"out_of_range_action": "stop"
+	},
+	"_rate2": {
+		"long_name": "PIT tax rate 2",
+		"description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.14
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_tbrk2": {
+		"long_name": "Second bracket",
+		"description": "Taxable income below this threshold is taxed at tax rate2",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			20
+		],
+		"range": {
+			"min": "_tbrk1",
+			"max": "_tbrk3"
+		},
+		"out_of_range_minmsg": "for _tbrk1",
+		"out_of_range_maxmsg": "for _tbrk3",
+		"out_of_range_action": "stop"
+
+	},
+	"_rate3": {
+		"long_name": "PIT tax rate 3",
+		"description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.17
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+
+	},
+	"_tbrk3": {
+		"long_name": "Third bracket ",
+		"description": "Taxable income below this threshold is taxed at tax rate3",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			35
+		],
+		"range": {
+			"min": "_tbrk2",
+			"max": "_tbrk4"
+		},
+		"out_of_range_minmsg": "for _tbrk2",
+		"out_of_range_maxmsg": "for _tbrk4",
+		"out_of_range_action": "stop"
+
+	},
+	"_rate4": {
+		"long_name": "PIT tax rate 4",
+		"description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+
+	"_tbrk4": {
+		"long_name": "Forth bracket",
+		"description": "Income below this threshold and above tax bracket 1 is taxed at tax rate4",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			45
+		],
+		"range": {
+			"min": "_tbrk3",
+			"max": "_tbrk5"
+		},
+		"out_of_range_minmsg": "for _tbrk3",
+		"out_of_range_maxmsg": "for _tbrk5",
+		"out_of_range_action": "stop"
+	},
+	"_rate5": {
+		"long_name": "PIT tax rate 5",
+		"description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.3
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+
+	},
+	"_tbrk5": {
+		"long_name": "Fifth bracket",
+		"description": "Income below this threshold and above tax bracket 1 is taxed at tax rate5",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			9e+99
+		],
+		"range": {
+			"min": 9e+99,
+			"max": 9e+99
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_inc_prop_freeuse": {
+		"long_name": "Presumed income from free use of property by others",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.06
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_prop_freeuse": {
+		"long_name": "Deduction rate - free use property income",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_lease": {
+		"long_name": "Deduction rate - lease income",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_tax_cat1": {
+		"long_name": "First category Income tax ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.0625
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_tax_cat2": {
+		"long_name": "Second category Income tax ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.0625
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	
+	"_rate_ded_stocks_dom": {
+		"long_name": "Deduction - income from sale of stocks ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+
+	"_rate_ded_stocks_foreign": {
+		"long_name": "Second Category (without dividends) Income Tax ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_prop_sale": {
+		"long_name": "Deduction - income from sale of property ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_cap_other": {
+		"long_name": "Deduction - income from sale of other capital ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_div": {
+		"long_name": "Deduction - income from sale of other capital ",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.0
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+
+	"_rate_tax_div": {
+		"long_name": "Dividends tax (2nd category)",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.05
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_ind_work": {
+		"long_name": "Deduction - wages, compensation income from independent work",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.2
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_board_dir": {
+		"long_name": "Deduction - per diem income of Board of Director",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.0
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_sal": {
+		"long_name": "Deduction - Income from Salaries",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.0
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_peru_tax_unit": {
+		"long_name": "Peruvian Tax Unit",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			4200
+		],
+		"range": {
+			"min": 0,
+			"max": 9e+99
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+
+	"_rate_ded_std": {
+		"long_name": "Standard Deduction from Salary Income",
+		"description": "UIT is Peruvian Tax Unit; In 2019 its 4200 ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			7
+		],
+		"range": {
+			"min": 0,
+			"max": 9e+99
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_addl": {
+		"long_name": "Additional Deduction from Salary Income",
+		"description": "UIT is Peruvian Tax Unit; In 2019 its 4200 ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			3
+		],
+		"range": {
+			"min": 0,
+			"max": 9e+99
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+	"_rate_ded_donation": {
+		"long_name": "Deduction - Charitable Donations",
+		"description": "deduction for donations",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			1
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+	},
+
+	"_max_ded_char": {
+		"long_name": "Charitable Contribution Deduction Limit",
+		"description": " ",
+		"itr_ref": "Peru Tax Law",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.1
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+
+	},
+	 "_rate1_curr_law": {  
+         "long_name": "PIT tax rate 1 - current law", 
+         "description": "The lowest tax rate, applied to the portion of taxable income below tax bracket 1.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",    
+         "row_label": [  
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": "",
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             0.08
+         ],
+         "range": {
+             "min": 0,
+             "max": 1 
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"     
+     },
+     "_tbrk1_curr_law": {
+         "long_name": "PIT tax bracket 1 (upper threshold)",
+         "description": "Taxable income below this threshold is taxed at tax rate 1.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": true,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": [
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+            5
+         ],
+         "range": {
+             "min": 0,
+             "max": "_tbrk2_curr_law"
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "for _tbrk2",
+         "out_of_range_action": "stop"     
+     },
+     "_rate2_curr_law": {  
+         "long_name": "PIT tax rate 2 - current law", 
+         "description": "Tax rate applied to the portion of taxable income between tax bracket 2 and 1",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",    
+         "row_label": [  
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": "",
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             0.14
+         ],
+         "range": {
+             "min": 0,
+             "max": 1 
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"      
+     },
+     "_tbrk2_curr_law": {
+         "long_name": "PIT tax bracket 2 (upper threshold)",
+         "description": "Taxable income below this threshold is taxed at tax rate 2.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": true,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": [
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+            20
+         ],
+         "range": {
+             "min": "_tbrk1_curr_law",
+             "max": "_tbrk3_curr_law"
+         },
+         "out_of_range_minmsg": "for _tbrk1",
+         "out_of_range_maxmsg": "for _tbrk3",
+         "out_of_range_action": "stop"   
+     },
+     "_rate3_curr_law": {  
+         "long_name": "PIT tax rate 3 - current law", 
+         "description": "Tax rate applied to the portion of taxable income between tax bracket 3 and 2.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",    
+         "row_label": [  
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": "",
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             0.17
+         ],
+         "range": {
+             "min": 0,
+             "max": 1 
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"    
+     },
+     "_tbrk3_curr_law": {
+         "long_name": "PIT tax bracket 3 (upper threshold)",
+         "description": "Taxable income below this threshold is taxed at tax rate 3.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": true,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": [
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+            35
+         ],
+         "range": {
+             "min": "_tbrk2_curr_law",
+             "max": "_tbrk4_curr_law"
+         },
+         "out_of_range_minmsg": "for _tbrk2",
+         "out_of_range_maxmsg": "for _tbrk4",
+         "out_of_range_action": "stop"     
+     },
+     "_rate4_curr_law": {
+         "long_name": "PIT tax rate 4 - current law",
+         "description": "Tax rate applied to the portion of taxable income between tax bracket 4 and 3.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": "",
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             0.2
+         ],
+         "range": {
+             "min": 0,
+             "max": 1
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"   
+     },
+     "_tbrk4_curr_law": {
+         "long_name": "PIT tax bracket 4 (upper threshold)",
+         "description": "Taxable income below this threshold is taxed at tax rate 4.",
+         "itr_ref": "R code",
+         "notes": "",
+         "row_var": "AYEAR",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": true,
+         "cpi_inflated": false,
+         "col_var": "",
+         "col_label": [
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+                 45
+         ],
+         "range": {
+             "min": "_tbrk3_curr_law",
+             "max": "_tbrk5_curr_law"
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"                
+     },
+     "_rate5_curr_law": {
+ 		"long_name": "PIT tax rate 5",
+ 		"description": "Tax rate applied to the portion of taxable income between tax bracket 5 and 4",
+ 		"itr_ref": " ",
+ 		"notes": "",
+ 		"row_var": "AYEAR",
+ 		"row_label": [
+ 			"2019"
+ 		],
+ 		"start_year": 2019,
+ 		"cpi_inflatable": false,
+ 		"cpi_inflated": false,
+ 		"col_var": "",
+ 		"col_label": "",
+ 		"boolean_value": false,
+ 		"integer_value": false,
+ 		"value": [
+ 			0.3
+ 		],
+ 		"range": {
+ 			"min": 0,
+ 			"max": 1
+ 		},
+ 		"out_of_range_minmsg": "",
+ 		"out_of_range_maxmsg": "",
+ 		"out_of_range_action": "stop"
+
+ 	},
+ 	"_tbrk5_curr_law": {
+ 		"long_name": "Fifth bracket",
+ 		"description": "Income below this threshold and above tax bracket 4 is taxed at tax rate5",
+ 		"itr_ref": " ",
+ 		"notes": "",
+ 		"row_var": "AYEAR",
+ 		"row_label": [
+ 			"2019"
+ 		],
+ 		"start_year": 2019,
+ 		"cpi_inflatable": true,
+ 		"cpi_inflated": false,
+ 		"col_var": "",
+ 		"col_label": [],
+ 		"boolean_value": false,
+ 		"integer_value": false,
+ 		"value": [
+ 			9e+99
+ 		],
+ 		"range": {
+ 			"min": 9e+99,
+ 			"max": 9e+99
+ 		},
+ 		"out_of_range_minmsg": "",
+ 		"out_of_range_maxmsg": "",
+ 		"out_of_range_action": "stop"
+ 	},
+ 	"_rate_tax_cat1_curr_law": {
+ 		"long_name": "First category Income tax - current law",
+ 		"description": " ",
+ 		"itr_ref": "Peru Tax Law",
+ 		"notes": "",
+ 		"row_var": "AYEAR",
+ 		"row_label": [
+ 			"2019"
+ 		],
+ 		"start_year": 2019,
+ 		"cpi_inflatable": false,
+ 		"cpi_inflated": false,
+ 		"col_var": "",
+ 		"col_label": "",
+ 		"boolean_value": false,
+ 		"integer_value": false,
+ 		"value": [
+ 			0.0625
+ 		],
+ 		"range": {
+ 			"min": 0,
+ 			"max": 1
+ 		},
+ 		"out_of_range_minmsg": "",
+ 		"out_of_range_maxmsg": "",
+ 		"out_of_range_action": "stop"
+ 	},
+ 	"_rate_tax_cat2_curr_law": {
+ 		"long_name": "Second category Income tax - current law ",
+ 		"description": " ",
+ 		"itr_ref": "Peru Tax Law",
+ 		"notes": "",
+ 		"row_var": "AYEAR",
+ 		"row_label": [
+ 			"2019"
+ 		],
+ 		"start_year": 2019,
+ 		"cpi_inflatable": false,
+ 		"cpi_inflated": false,
+ 		"col_var": "",
+ 		"col_label": "",
+ 		"boolean_value": false,
+ 		"integer_value": false,
+ 		"value": [
+ 			0.0625
+ 		],
+ 		"range": {
+ 			"min": 0,
+ 			"max": 1
+ 		},
+ 		"out_of_range_minmsg": "",
+ 		"out_of_range_maxmsg": "",
+ 		"out_of_range_action": "stop"
+ 	},
+ 	"_rate_tax_div_curr_law": {
+ 		"long_name": "Dividends tax (2nd category) - current law",
+ 		"description": " ",
+ 		"itr_ref": "Peru Tax Law",
+ 		"notes": "",
+ 		"row_var": "AYEAR",
+ 		"row_label": [
+ 			"2019"
+ 		],
+ 		"start_year": 2019,
+ 		"cpi_inflatable": false,
+ 		"cpi_inflated": false,
+ 		"col_var": "",
+ 		"col_label": "",
+ 		"boolean_value": false,
+ 		"integer_value": false,
+ 		"value": [
+ 			0.05
+ 		],
+ 		"range": {
+ 			"min": 0,
+ 			"max": 1
+ 		},
+ 		"out_of_range_minmsg": "",
+ 		"out_of_range_maxmsg": "",
+ 		"out_of_range_action": "stop"
+ 	},
+ 	
+    "_elasticity_pit_taxable_income_threshold": {
+         "long_name": "Threshold for Elasticity of Taxable Income",
+         "description": "elasticity",
+         "itr_ref": "elasticity",
+         "notes": "",
+         "row_var": "Tax_year",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "bracket",
+         "col_label": [
+             "bracket1",
+             "bracket2",
+             "bracket3"
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             [
+                 50000,
+                 200000,
+                 9e99
+             ]
+       ],
+         "range": {
+             "min": 0,
+             "max": 9e99
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"
+     },
+     "_elasticity_pit_taxable_income_value": {
+         "long_name": "Elasticity of Taxable Income",
+         "description": "elasticity",
+         "itr_ref": "elasticity",
+         "notes": "",
+         "row_var": "Tax_year",
+         "row_label": [
+             "2019"
+         ],
+         "start_year": 2019,
+         "cpi_inflatable": false,
+         "cpi_inflated": false,
+         "col_var": "Profit",
+         "col_label": [
+             "bracket1",
+             "bracket2",
+             "bracket3"
+         ],
+         "boolean_value": false,
+         "integer_value": false,
+         "value": [
+             [
+                 0.0,
+                 0.0,
+                 0.0
+                 ]
+       ],
+         "range": {
+             "min": 0,
+             "max": 1
+         },
+         "out_of_range_minmsg": "",
+         "out_of_range_maxmsg": "",
+         "out_of_range_action": "stop"
+     },
+       "_elasticity_pit_capital_income_threshold": {
+           "long_name": "Threshold for Elasticity of Capital Income",
+           "description": "elasticity",
+           "itr_ref": "elasticity",
+           "notes": "",
+           "row_var": "Tax_year",
+           "row_label": [
+               "2019"
+           ],
+           "start_year": 2019,
+           "cpi_inflatable": false,
+           "cpi_inflated": false,
+           "col_var": "bracket",
+           "col_label": [
+               "bracket1",
+               "bracket2",
+               "bracket3"
+           ],
+           "boolean_value": false,
+           "integer_value": false,
+           "value": [
+               [
+                   50000,
+                   200000,
+                   9e99
+               ]
+         ],
+           "range": {
+               "min": 0,
+               "max": 9e99
+           },
+           "out_of_range_minmsg": "",
+           "out_of_range_maxmsg": "",
+           "out_of_range_action": "stop"
+       },
+       "_elasticity_pit_capital_income_value": {
+           "long_name": "Elasticity of Capital Income",
+           "description": "elasticity",
+           "itr_ref": "elasticity",
+           "notes": "",
+           "row_var": "Tax_year",
+           "row_label": [
+               "2019"
+           ],
+           "start_year": 2019,
+           "cpi_inflatable": false,
+           "cpi_inflated": false,
+           "col_var": "Profit",
+           "col_label": [
+               "bracket1",
+               "bracket2",
+               "bracket3"
+           ],
+           "boolean_value": false,
+           "integer_value": false,
+           "value": [
+               [
+                   0.0,
+                   0.0,
+                   0.0
+                   ]
+         ],
+           "range": {
+               "min": 0,
+               "max": 1
+           },
+           "out_of_range_minmsg": "",
+           "out_of_range_maxmsg": "",
+           "out_of_range_action": "stop"
+       }             
+}

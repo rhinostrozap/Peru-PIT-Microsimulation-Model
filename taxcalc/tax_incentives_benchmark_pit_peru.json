@@ -1,0 +1,16 @@
+
+
+{
+    "policy": {
+    "_rate_ded_lease": {"2019": [0.0]},
+    "_rate_ded_prop_freeuse": {"2019": [0.0]},
+    "_rate_ded_stocks_dom": {"2019": [0.0]},
+    "_rate_ded_stocks_foreign": {"2019": [0.0]},
+    "_rate_ded_prop_sale": {"2019": [0.0]},
+    "_rate_ded_cap_other": {"2019": [0.0]},
+    "_rate_ded_ind_work": {"2019": [0.0]},
+    "_rate_ded_std": {"2019": [0.0]},
+    "_rate_ded_addl": {"2019": [0.0]},
+    "_rate_ded_donation": {"2019": [0.0]}
+    }
+}

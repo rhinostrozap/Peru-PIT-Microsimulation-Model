@@ -1,0 +1,483 @@
+{
+	"read": {
+		"id_n": {
+			"required": true,
+			"type": "int",
+			"desc": "Unique positive numeric identifier for filing unit",
+			"form": {
+				"2019": "Private Info"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"Year": {
+			"required": true,
+			"type": "int",
+			"desc": "Assessment Year",
+			"form": {
+				"2019": "private info"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_lease": {
+			"type": "float",
+			"desc": "Income from the lease and sublease of goods or properties (First category)",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"value_prop_freeuse": {
+			"type": "float",
+			"desc": "Taxable value of property let out free of cost",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_stocks_dom": {
+			"type": "float",
+			"desc": "Capital gains from stocks and securities (2nd category) - f1666",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_stocks_foreign": {
+			"type": "float",
+			"desc": "Capital gains from stocks and securities at foreing markets (MILA-Peru, Chile & Colombia) (2nd category) - f1666",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_gross_prop_sale": {
+			"type": "float",
+			"desc": "Gross Property sale income (2nd category) - f1665",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_div": {
+			"type": "float",
+			"desc": "Dividends (2nd category)",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_cap_other": {
+			"type": "float",
+			"desc": "Other income  from capital disposition - 2nd category",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_ind_work": {
+			"type": "float",
+			"desc": "Independent work income (wages, compensations and fees) - 4th category",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"ded_ind_work": {
+			"type": "float",
+			"desc": "20% Deduction",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_board_dir": {
+			"type": "float",
+			"desc": "Board of directors per diem income",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_sal": {
+			"type": "float",
+			"desc": "Employee salaries - 5th category",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"ded_3UIT": {
+			"type": "float",
+			"desc": "3 UIT (Unidad Impositiva Tributaria or Tax Unit*) Deduction",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"ded_fin_transtax": {
+			"type": "float",
+			"desc": "Financial Transaction Tax (ITF) Deduction",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"ded_charitable": {
+			"type": "float",
+			"desc": "Charitable Contribution Deduction",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		"inc_foreign_net": {
+			"type": "float",
+			"desc": "Total foreign net income ",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		
+		"foreign_tax_credit": {
+			"type": "float",
+			"desc": "Foreign income tax credit - Labour Income",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		},
+		
+		"total_income": {
+			"type": "float",
+			"desc": "Total Income",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
+		}
+	},
+	"calc": {
+		"income_lease": {
+			"type": "float",
+			"desc": "income from lease of goods",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_prop_freeuse": {
+			"type": "float",
+			"desc": "income from free use of property",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_inc_lease": {
+			"type": "float",
+			"desc": "Deduction - lease income",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_inc_prop_freeuse": {
+			"type": "float",
+			"desc": "Deduction - free use property income",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_cat1": {
+			"type": "float",
+			"desc": "Net taxable category 1 income - post deductions",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_stocks_dom": {
+			"type": "float",
+			"desc": "income from capital gains from sale of stocks / securities",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_stocks_foreign": {
+			"type": "float",
+			"desc": "income from capital gains from sale of stocks / securities in foreign markets",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_cap_other": {
+			"type": "float",
+			"desc": "income from capital gains from sale of other capital",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_prop_sale": {
+			"type": "float",
+			"desc": "income from capital gains from sale of property",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_div": {
+			"type": "float",
+			"desc": "income from dividends",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_ind_work": {
+			"type": "float",
+			"desc": "income from independent work - wages, compensation",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_board_dir": {
+			"type": "float",
+			"desc": "income from per diem by Board Director",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"income_sal": {
+			"type": "float",
+			"desc": "income from salaries",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_stocks_dom": {
+			"type": "float",
+			"desc": "Deduction - income from sale of stocks",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_stocks_foreign": {
+			"type": "float",
+			"desc": "Deduction - income from sale of stocks in foreign market",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_prop_sale": {
+			"type": "float",
+			"desc": "Deduction - income from sale of property",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_cap_other": {
+			"type": "float",
+			"desc": "Deduction - income from sale of other capital",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_div": {
+			"type": "float",
+			"desc": "Deduction - income from dividends",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_ind_work": {
+			"type": "float",
+			"desc": "Deduction - income from independent work",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_board_dir": {
+			"type": "float",
+			"desc": "Deduction - income from per diem by Board Director",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_sal": {
+			"type": "float",
+			"desc": "Deduction - income from salaries",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_nondiv_cat2": {
+			"type": "float",
+			"desc": "Net taxable category 2 non-dividend income - post deductions",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_div_cat2": {
+			"type": "float",
+			"desc": "Net taxable category 2 dividend income - post deductions",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_cat4": {
+			"type": "float",
+			"desc": "Net taxable category 4 income - post deductions",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_cat5": {
+			"type": "float",
+			"desc": "Net taxable category 5 income - post deductions",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_foreign": {
+			"type": "float",
+			"desc": "Net taxable foreign source income",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"net_inc_labor_foreign": {
+			"type": "float",
+			"desc": "Net taxable income from work and foreign source",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		
+		"ded_std": {
+			"type": "float",
+			"desc": "Standard Deduction (7UIT in 2019) from work income",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_addl": {
+			"type": "float",
+			"desc": "Additional Deduction (3UIT in 2019) from work income",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_fintax": {
+			"type": "float",
+			"desc": "Financial Transaction Tax (ITF) Deduction in UIT",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_donation": {
+			"type": "float",
+			"desc": "Deduction from charitable donations",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_w": {
+			"type": "float",
+			"desc": "Total labor income from all sources",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_c": {
+			"type": "float",
+			"desc": "Total capital income from all sources",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti": {
+			"type": "float",
+			"desc": "Total income from all sources",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_w_behavior": {
+			"type": "float",
+			"desc": "Total labor income from all sources including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_cat1_behavior": {
+			"type": "float",
+			"desc": "Total capital income from category1 sources including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_cat2_behavior": {
+			"type": "float",
+			"desc": "Total capital income from category2 sources including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"tti_div_behavior": {
+			"type": "float",
+			"desc": "Total dividend income including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"GTI": {
+			"type": "float",
+			"desc": "Total gross income from all sources before deduction",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"pit_c": {
+			"type": "float",
+			"desc": "Tax on capital income including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"pit_w": {
+			"type": "float",
+			"desc": "Tax on labor income including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"pitax": {
+			"type": "float",
+			"desc": "Total tax including behavioral response",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"pitax_net": {
+			"type": "float",
+			"desc": "Net tax after foreign tax credit ",
+			"form": {
+				"2019": "pit_peru"
+			}
+		}
+	}
+}
