@@ -143,7 +143,8 @@ def generate_policy_revenues():
     id_varlist = []
     # start the simulation for pit/cit/vat    
     if global_variables['pit']:
-        tax_list = tax_list + ['pit', 'sst']
+        #tax_list = tax_list + ['pit', 'sst']
+        tax_list = tax_list + ['pit']
         tax_collection_var_list = tax_collection_var_list + ['pitax']
         id_varlist = id_varlist + [global_variables['pit_id_var']]        
         recs = Records(data=global_variables['pit_data_filename'], weights=global_variables['pit_weights_filename'], gfactors=GrowFactors(growfactors_filename=global_variables['GROWFACTORS_FILENAME']))
