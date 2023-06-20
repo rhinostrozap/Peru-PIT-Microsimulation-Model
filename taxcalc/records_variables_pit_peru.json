@@ -166,7 +166,18 @@
 			},
 			"cross_year": "No",
 			"attribute": "No"
+		},
+
+		"inc_interest": {
+			"type": "float",
+			"desc": "income from interest carned on deposits",
+			"form": {
+				"2019": ".New law in 2024"
+			},
+			"cross_year": "No",
+			"attribute": "No"
 		}
+
 	},
 	"calc": {
 		"income_lease": {
@@ -239,6 +250,13 @@
 				"2019": "pit_peru"
 			}
 		},
+		"income_interest": {
+			"type": "float",
+			"desc": "income from interest",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
 		"income_ind_work": {
 			"type": "float",
 			"desc": "income from independent work - wages, compensation",
@@ -291,6 +309,13 @@
 		"ded_div": {
 			"type": "float",
 			"desc": "Deduction - income from dividends",
+			"form": {
+				"2019": "pit_peru"
+			}
+		},
+		"ded_interest": {
+			"type": "float",
+			"desc": "Deduction - income from interest",
 			"form": {
 				"2019": "pit_peru"
 			}
@@ -465,3 +490,4 @@
 		}
 	}
 }
+
