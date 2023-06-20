@@ -81,6 +81,12 @@ def income_dividend(inc_div, income_div):
     income_div = inc_div
     return income_div
 
+"Calculation of interest income"  
+@iterate_jit(nopython=True)
+def income_interest(inc_interest, income_interest):
+    income_interest = inc_interest
+    return income_interest
+
 "Calculation of deduction from capital gains from stocks"
 @iterate_jit(nopython=True)
 def deduction_stocks_domestic(income_stocks_dom, rate_ded_stocks_dom, ded_stocks_dom):
@@ -111,12 +117,18 @@ def deduction_dividend(income_div, rate_ded_div, ded_div):
     ded_div = income_div * rate_ded_div
     return ded_div
 
+"Calculation of deduction from dividend income"  
+@iterate_jit(nopython=True)
+def deduction_interest(income_interest, rate_ded_interest, ded_interest):
+    ded_interest = income_interest * rate_ded_interest
+    return ded_interest
+
 "Calculation of net taxable second category non-dividend income"
 @iterate_jit(nopython=True)
-def net_income_nondiv_cat2(income_stocks_dom, income_stocks_foreign, income_prop_sale, income_cap_other, 
-                    ded_stocks_dom, ded_stocks_foreign, ded_prop_sale, ded_cap_other, net_inc_nondiv_cat2):
+def net_income_nondiv_cat2(income_stocks_dom, income_stocks_foreign, income_prop_sale, income_cap_other, income_interest, 
+                    ded_stocks_dom, ded_stocks_foreign, ded_prop_sale, ded_cap_other, ded_interest,  net_inc_nondiv_cat2):
     net_inc_nondiv_cat2 =  (income_stocks_dom - ded_stocks_dom) + (income_stocks_foreign - ded_stocks_foreign) + \
-                           (income_prop_sale - ded_prop_sale) + (income_cap_other - ded_cap_other)
+                           (income_prop_sale - ded_prop_sale) + (income_cap_other - ded_cap_other) + (income_interest - ded_interest)
     return net_inc_nondiv_cat2
 
 "Calculation of net taxable second category dividend income"
