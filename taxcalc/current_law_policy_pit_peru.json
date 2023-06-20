@@ -264,6 +264,61 @@
 		"boolean_value": false,
 		"integer_value": false,
 		"value": [
+			55
+		],
+		"range": {
+			"min": "_tbrk4",
+			"max": "_tbrk6"
+		},
+		"out_of_range_minmsg": "for_tbrk4",
+		"out_of_range_maxmsg": "for_tbrk6",
+		"out_of_range_action": "stop"
+	},
+	"_rate6": {
+		"long_name": "PIT tax rate 6",
+		"description": "The second lowest tax rate, applied to the portion of taxable income below tax bracket 2 and above tax bracket 1.",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": false,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": "",
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
+			0.3
+		],
+		"range": {
+			"min": 0,
+			"max": 1
+		},
+		"out_of_range_minmsg": "",
+		"out_of_range_maxmsg": "",
+		"out_of_range_action": "stop"
+
+	},
+	"_tbrk6": {
+		"long_name": "Fifth bracket",
+		"description": "Income below this threshold and above tax bracket 1 is taxed at tax rate5",
+		"itr_ref": " ",
+		"notes": "",
+		"row_var": "AYEAR",
+		"row_label": [
+			"2019"
+		],
+		"start_year": 2019,
+		"cpi_inflatable": true,
+		"cpi_inflated": false,
+		"col_var": "",
+		"col_label": [],
+		"boolean_value": false,
+		"integer_value": false,
+		"value": [
 			9e+99
 		],
 		"range": {
