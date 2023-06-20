@@ -125,8 +125,8 @@ def deduction_interest(income_interest, rate_ded_interest, ded_interest):
 
 "Calculation of net taxable second category non-dividend income"
 @iterate_jit(nopython=True)
-def net_income_nondiv_cat2(income_stocks_dom, income_stocks_foreign, income_prop_sale, income_cap_other,income_interest,
-                    ded_stocks_dom, ded_stocks_foreign, ded_prop_sale, ded_cap_other, ded_interest, net_inc_nondiv_cat2):
+def net_income_nondiv_cat2(income_stocks_dom, income_stocks_foreign, income_prop_sale, income_cap_other, income_interest, 
+                    ded_stocks_dom, ded_stocks_foreign, ded_prop_sale, ded_cap_other, ded_interest,  net_inc_nondiv_cat2):
     net_inc_nondiv_cat2 =  (income_stocks_dom - ded_stocks_dom) + (income_stocks_foreign - ded_stocks_foreign) + \
                            (income_prop_sale - ded_prop_sale) + (income_cap_other - ded_cap_other) + (income_interest - ded_interest)
     return net_inc_nondiv_cat2
@@ -367,7 +367,7 @@ def cal_tti_labor(rate1, rate2, rate3, rate4, rate5, tbrk1, tbrk2, tbrk3, tbrk4,
     
 "Calculation for PIT from labor income incorporating behaviour"
 @iterate_jit(nopython=True)
-def cal_pit_w(tti_w_behavior, peru_tax_unit, rate1, rate2, rate3, rate4, rate5, tbrk1, tbrk2, tbrk3, tbrk4, tbrk5, pit_w):
+def cal_pit_w(tti_w_behavior, peru_tax_unit, rate1, rate2, rate3, rate4, rate5, rate6, tbrk1, tbrk2, tbrk3, tbrk4, tbrk5, tbrk6, pit_w):
     """
     Compute tax liability given the progressive tax rate schedule specified
     by the (marginal tax) rate* and (upper tax bracket) brk* parameters and
@@ -379,7 +379,8 @@ def cal_pit_w(tti_w_behavior, peru_tax_unit, rate1, rate2, rate3, rate4, rate5, 
                     rate2 * min(tbrk2 - tbrk1, max(0., taxinc - tbrk1)) +
                     rate3 * min(tbrk3 - tbrk2, max(0., taxinc - tbrk2)) +
                     rate4 * min(tbrk4 - tbrk3, max(0., taxinc - tbrk3)) +
-                    rate5 * max(0., taxinc - tbrk4))
+                    rate5 * min(tbrk5 - tbrk4, max(0., taxinc - tbrk4)) +
+                    rate6 * max(0., taxinc - tbrk5))
     pit_w *= peru_tax_unit    
     return pit_w
 
