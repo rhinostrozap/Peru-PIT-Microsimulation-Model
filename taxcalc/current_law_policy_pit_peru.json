@@ -1372,5 +1372,33 @@
            "out_of_range_minmsg": "",
            "out_of_range_maxmsg": "",
            "out_of_range_action": "stop"
-       }             
+       },
+       "_switch": {
+   		"long_name": "switch",
+   		"description": "Por default",
+   		"itr_ref": "Peru Tax Law",
+   		"notes": "",
+   		"row_var": "AYEAR",
+   		"row_label": [
+   			"2019"
+   		],
+   		"start_year": 2019,
+   		"cpi_inflatable": false,
+   		"cpi_inflated": false,
+   		"col_var": "",
+   		"col_label": "",
+   		"boolean_value": false,
+   		"integer_value": false,
+   		"value": [
+   			0
+   		],
+   		"range": {
+   			"min": 0,
+   			"max": 1
+   		},
+   		"out_of_range_minmsg": "",
+   		"out_of_range_maxmsg": "",
+   		"out_of_range_action": "stop"
+   	}
+                    
 }

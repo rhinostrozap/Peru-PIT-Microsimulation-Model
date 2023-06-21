@@ -176,7 +176,18 @@
 			},
 			"cross_year": "No",
 			"attribute": "No"
+		},
+		
+		"switch": {
+			"type": "int",
+			"desc": "switch",
+			"form": {
+				"2019": "pit_peru"
+			},
+			"cross_year": "No",
+			"attribute": "No"
 		}
+				
 
 	},
 	"calc": {

@@ -14,13 +14,13 @@ from taxcalc.decorators import iterate_jit
  FIRST CATEGORY INCOME 
 ------------------------------------------
 '''
-"Calculation for income from lease of goods"
+"Calculation for income from lease of goods -  arrendamiento de bienes"
 @iterate_jit(nopython=True)
 def income_lease(inc_lease, income_lease):
     income_lease = inc_lease
     return income_lease
 
-"Calculation for income from free use of property"
+"Calculation for income from free use of property - libre uso de propiedad"
 @iterate_jit(nopython=True)
 def income_property(value_prop_freeuse, rate_inc_prop_freeuse, income_prop_freeuse):
     income_prop_freeuse = value_prop_freeuse * rate_inc_prop_freeuse
@@ -280,8 +280,8 @@ def deduction_donations(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_charita
 
 "Calculation of net income from labor and foreign sources"
 @iterate_jit(nopython=True)
-def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch_flat_sch, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
-    tti_w = (net_inc_cat4 + net_inc_cat5) + tti_c*switch_flat_sch
+def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
+    tti_w = (net_inc_cat4 + net_inc_cat5) + tti_c*switch
     tti_w = tti_w - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
     return tti_w
 
@@ -293,11 +293,14 @@ def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch_flat_sch, net_inc
 '''
 
 @iterate_jit(nopython=True)
-def net_taxable_income(tti_w, tti_c, tti):
+def net_taxable_income(tti_w, tti_c, switch, tti):
     """
     Compute sum of net income from all categories of income.
     """
-    tti = tti_w + tti_c
+    if switch == 0:
+        tti = tti_w + tti_c
+    else: 
+        tti = tti_w
     return tti
 
 '''
@@ -386,6 +389,8 @@ def cal_pit_w(tti_w_behavior, peru_tax_unit, rate1, rate2, rate3, rate4, rate5, 
     return pit_w
 
 
+
+
 '''
 -----------------------------------------------------------------------------
  CALCULATION OF TAX LIABILITY - CAPITAL INCOME 
@@ -441,8 +446,8 @@ def cal_tti_capital(rate_tax_cat1, rate_tax_cat1_curr_law,
 
 "Calculation for PIT from capital"
 @iterate_jit(nopython=True)
-def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior, switch_flat_sch, pit_c):
-    pit_c = ((tti_cat1_behavior*rate_tax_cat1) + (tti_cat2_behavior*rate_tax_cat2) + (tti_div_behavior*rate_tax_div))*(1 - switch_flat_sch)
+def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior, pit_c):
+    pit_c = (tti_cat1_behavior*rate_tax_cat1) + (tti_cat2_behavior*rate_tax_cat2) + (tti_div_behavior*rate_tax_div)
     return pit_c
 
 
