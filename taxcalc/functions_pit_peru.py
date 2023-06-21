@@ -280,8 +280,9 @@ def deduction_donations(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_charita
 
 "Calculation of net income from labor and foreign sources"
 @iterate_jit(nopython=True)
-def income_labor_all(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
-    tti_w = (net_inc_cat4 + net_inc_cat5) - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
+def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch_flat_sch, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
+    tti_w = (net_inc_cat4 + net_inc_cat5) + tti_c*switch_flat_sch
+    tti_w = tti_w - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
     return tti_w
 
 
@@ -440,8 +441,8 @@ def cal_tti_capital(rate_tax_cat1, rate_tax_cat1_curr_law,
 
 "Calculation for PIT from capital"
 @iterate_jit(nopython=True)
-def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior, pit_c):
-    pit_c = (tti_cat1_behavior*rate_tax_cat1) + (tti_cat2_behavior*rate_tax_cat2) + (tti_div_behavior*rate_tax_div)
+def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior, switch_flat_sch, pit_c):
+    pit_c = ((tti_cat1_behavior*rate_tax_cat1) + (tti_cat2_behavior*rate_tax_cat2) + (tti_div_behavior*rate_tax_div))*(1 - switch_flat_sch)
     return pit_c
 
 

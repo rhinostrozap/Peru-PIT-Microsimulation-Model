@@ -508,11 +508,11 @@ class Application(tk.Frame):
 def main():
     ctypes.windll.shcore.SetProcessDpiAwareness(1)
     root = tk.Tk()
-    f = tkfont.Font(family='Courier New', size=12)
+    f = tkfont.Font(family='Courier New', size=13)
     s = ttk.Style()
     s.configure('.', font=f)
     root.geometry('1000x600')
-    root.title("World Bank Microsimulation Model")
+    root.title("Peru Tax Microsimulation Model")
     root.state('zoomed')
     app = Application(root)
     app.mainloop()

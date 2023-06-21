@@ -511,7 +511,8 @@ class super_combo(tk.Frame):
         self.button_generate_revenue_policy.place(relx = self.generate_revenue_policy_button_x,
                                                     rely = self.generate_revenue_policy_button_y, anchor = "w")       
         
-        self.image1 = Image.open("world_bank.png")
+        #self.image1 = Image.open("world_bank.png")
+        self.image1 = Image.open("peru-flag.png")
         self.image2 = self.image1.resize((700, 400), Image.ANTIALIAS)
         self.image = ImageTk.PhotoImage(self.image2)
         # "world_bank.png"
