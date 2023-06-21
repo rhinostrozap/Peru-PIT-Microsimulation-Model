@@ -14,13 +14,13 @@ from taxcalc.decorators import iterate_jit
  FIRST CATEGORY INCOME 
 ------------------------------------------
 '''
-"Calculation for income from lease of goods -  arrendamiento de bienes"
+"Calculation for income from lease of goods"
 @iterate_jit(nopython=True)
 def income_lease(inc_lease, income_lease):
     income_lease = inc_lease
     return income_lease
 
-"Calculation for income from free use of property - libre uso de propiedad"
+"Calculation for income from free use of property"
 @iterate_jit(nopython=True)
 def income_property(value_prop_freeuse, rate_inc_prop_freeuse, income_prop_freeuse):
     income_prop_freeuse = value_prop_freeuse * rate_inc_prop_freeuse
@@ -145,8 +145,8 @@ def net_income_div_cat2(income_div, ded_div, net_inc_div_cat2):
 
 "Calculation for tax base from capital income from first and second category"
 @iterate_jit(nopython=True)
-def tti_capital(net_inc_cat1, net_inc_nondiv_cat2, net_inc_div_cat2, tti_c):
-    tti_c = net_inc_cat1 + net_inc_nondiv_cat2 + net_inc_div_cat2
+def tti_capital(net_inc_cat1, net_inc_nondiv_cat2, net_inc_div_cat2, switch,tti_c):
+    tti_c = net_inc_cat1 + net_inc_nondiv_cat2 + net_inc_div_cat2*(1- switch)
     return tti_c
 
 '''
@@ -280,9 +280,8 @@ def deduction_donations(net_inc_cat4, net_inc_cat5, net_inc_foreign, ded_charita
 
 "Calculation of net income from labor and foreign sources"
 @iterate_jit(nopython=True)
-def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch, net_inc_foreign, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
-    tti_w = (net_inc_cat4 + net_inc_cat5) + tti_c*switch
-    tti_w = tti_w - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
+def income_labor_all(net_inc_cat4, net_inc_cat5, net_inc_foreign, tti_c, switch, ded_std, ded_addl, ded_fintax, ded_donation, tti_w):
+    tti_w = (net_inc_cat4 + net_inc_cat5) + switch*tti_c - ded_std - ded_addl - ded_fintax - ded_donation + net_inc_foreign
     return tti_w
 
 
@@ -293,14 +292,11 @@ def income_labor_all(net_inc_cat4, net_inc_cat5, tti_c, switch, net_inc_foreign,
 '''
 
 @iterate_jit(nopython=True)
-def net_taxable_income(tti_w, tti_c, switch, tti):
+def net_taxable_income(tti_w, tti_c, tti):
     """
     Compute sum of net income from all categories of income.
     """
-    if switch == 0:
-        tti = tti_w + tti_c
-    else: 
-        tti = tti_w
+    tti = tti_w + tti_c
     return tti
 
 '''
@@ -314,7 +310,7 @@ def net_taxable_income(tti_w, tti_c, switch, tti):
 "Elasticity = % Change in income / % Change in tax rate "
 
 @iterate_jit(nopython=True)
-def cal_tti_labor(rate1, rate2, rate3, rate4, rate5, tbrk1, tbrk2, tbrk3, tbrk4, tbrk5,
+def cal_tti_labor(rate1, rate2, rate3, rate4, rate5,rate6, tbrk1, tbrk2, tbrk3, tbrk4, tbrk5,
                          rate1_curr_law, rate2_curr_law, rate3_curr_law, rate4_curr_law, rate5_curr_law, 
                          tbrk1_curr_law, tbrk2_curr_law, tbrk3_curr_law, tbrk4_curr_law, tbrk5_curr_law,
                          elasticity_pit_taxable_income_threshold, elasticity_pit_taxable_income_value, 
@@ -348,8 +344,10 @@ def cal_tti_labor(rate1, rate2, rate3, rate4, rate5, tbrk1, tbrk2, tbrk3, tbrk4,
         marg_rate=rate3
     elif tti_w <= tbrk4:
         marg_rate=rate4
-    else:        
+    elif tti_w <= tbrk5:
         marg_rate=rate5
+    else:        
+        marg_rate=rate6
 
     if tti_w < 0:
         marg_rate_curr_law=0
@@ -387,8 +385,6 @@ def cal_pit_w(tti_w_behavior, peru_tax_unit, rate1, rate2, rate3, rate4, rate5, 
                     rate6 * max(0., taxinc - tbrk5))
     pit_w *= peru_tax_unit    
     return pit_w
-
-
 
 
 '''
@@ -446,8 +442,8 @@ def cal_tti_capital(rate_tax_cat1, rate_tax_cat1_curr_law,
 
 "Calculation for PIT from capital"
 @iterate_jit(nopython=True)
-def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior, pit_c):
-    pit_c = (tti_cat1_behavior*rate_tax_cat1) + (tti_cat2_behavior*rate_tax_cat2) + (tti_div_behavior*rate_tax_div)
+def cal_pit_c(rate_tax_cat1, rate_tax_cat2, rate_tax_div, tti_cat1_behavior, tti_cat2_behavior, tti_div_behavior,switch, pit_c):
+    pit_c = ((tti_cat1_behavior*rate_tax_cat1)+ (tti_cat2_behavior*rate_tax_cat2))*(1-switch) + (tti_div_behavior*rate_tax_div)
     return pit_c
 
 
